@@ -14,7 +14,7 @@ class AuthController extends Controller
     public function loginSubmit(Request $request)
     {
         // form Validation
-        
+
         $request->validate(
             // rules
             [
@@ -38,9 +38,11 @@ class AuthController extends Controller
         $username = $request->input('text_username');
         $password = $request->input('text_password');
 
+        //test database connection
 
         
-        echo 'Ok!';
+        
+        
         
     }
 
