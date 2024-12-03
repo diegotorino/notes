@@ -13,7 +13,6 @@ class MainController extends Controller
         $id = session('user_id');
         $notes = User::find($id)->notes()->get()->toArray();
 
-        
         //show home view
         return view('home', ['notes' => $notes]);
     }
