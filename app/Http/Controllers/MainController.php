@@ -108,10 +108,10 @@ class MainController extends Controller
 
         // check if note_id exists
         if(!$request->note_id == null){
+            die('erro');
             return redirect()->route('home');
         }
-
-
+        
         // decrypt note_id
         $id = Operations::decryptId($request->note_id);
 
@@ -124,7 +124,7 @@ class MainController extends Controller
         $note->save();
 
         // redirect to home
-        redirect()->route('home');
+        return redirect()->route('home');
 
 
 
